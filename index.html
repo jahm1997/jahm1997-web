@@ -19,12 +19,16 @@
             <div class="nav-logo">
                 <span class="logo-text">JH</span>
             </div>
+            <div class="nav-controls">
+                <button id="langToggle" class="icon-btn" aria-label="Cambiar idioma">ES</button>
+                <button id="themeToggle" class="icon-btn" aria-label="Cambiar tema">🌓</button>
+            </div>
             <ul class="nav-menu">
-                <li><a href="#inicio" class="nav-link">Inicio</a></li>
-                <li><a href="#sobre-mi" class="nav-link">Sobre Mí</a></li>
-                <li><a href="#servicios" class="nav-link">Servicios</a></li>
-                <li><a href="#portafolio" class="nav-link">Portafolio</a></li>
-                <li><a href="#contacto" class="nav-link">Contacto</a></li>
+                <li><a href="#inicio" class="nav-link" data-i18n="nav.home">Inicio</a></li>
+                <li><a href="#sobre-mi" class="nav-link" data-i18n="nav.about">Sobre Mí</a></li>
+                <li><a href="#servicios" class="nav-link" data-i18n="nav.services">Servicios</a></li>
+                <li><a href="#portafolio" class="nav-link" data-i18n="nav.portfolio">Portafolio</a></li>
+                <li><a href="#contacto" class="nav-link" data-i18n="nav.contact">Contacto</a></li>
             </ul>
             <div class="hamburger">
                 <span class="bar"></span>
@@ -39,17 +43,15 @@
         <div class="hero-container">
             <div class="hero-content">
                 <h1 class="hero-title">
-                        <span class="title-line">Liderando Proyectos</span>
-                        <span class="title-line highlight">IIoT & Full Stack</span>
+                        <span class="title-line" data-i18n="hero.title1">Liderando Proyectos</span>
+                        <span class="title-line highlight" data-i18n="hero.title2">IIoT & Full Stack</span>
                     </h1>
                     <p class="hero-description">
-                        Desarrollador Full Stack Senior especializado en Internet de las Cosas (IIoT), 
-                        telecomunicaciones y sector industrial. Reduzco tiempos de entrega en 25% y optimizo 
-                        flujos de trabajo en 60% con soluciones escalables.
+                        <span data-i18n="hero.desc">Desarrollador Full Stack Senior especializado en Internet de las Cosas (IIoT), telecomunicaciones y sector industrial. Reduzco tiempos de entrega en 25% y optimizo flujos de trabajo en 60% con soluciones escalables.</span>
                     </p>
                 <div class="hero-buttons">
-                    <a href="#servicios" class="btn btn-primary">Ver Servicios</a>
-                    <a href="#contacto" class="btn btn-secondary">Contactar</a>
+                    <a href="#servicios" class="btn btn-primary" data-i18n="hero.viewServices">Ver Servicios</a>
+                    <a href="#contacto" class="btn btn-secondary" data-i18n="hero.contact">Contactar</a>
                 </div>
             </div>
             <div class="hero-image">
@@ -67,7 +69,7 @@
     <section id="sobre-mi" class="about">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Sobre Mí</h2>
+                <h2 class="section-title" data-i18n="sections.about">Sobre Mí</h2>
                 <p class="section-subtitle">Conoce al profesional detrás de las soluciones</p>
             </div>
             <div class="about-content">
@@ -134,7 +136,7 @@
     <section id="servicios" class="services">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Servicios</h2>
+                <h2 class="section-title" data-i18n="sections.services">Servicios</h2>
                 <p class="section-subtitle">Soluciones que impulsan tu negocio</p>
             </div>
             <div class="services-grid">
@@ -218,7 +220,7 @@
     <section id="portafolio" class="portfolio">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Portafolio</h2>
+                <h2 class="section-title" data-i18n="sections.portfolio">Portafolio</h2>
                 <p class="section-subtitle">Algunos de mis proyectos destacados</p>
             </div>
             <div class="portfolio-grid">
@@ -294,7 +296,7 @@
     <section id="contacto" class="contact">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Contacto</h2>
+                <h2 class="section-title" data-i18n="sections.contact">Contacto</h2>
                 <p class="section-subtitle">¿Listo para transformar tu negocio? Hablemos</p>
             </div>
             <div class="contact-content">
@@ -306,7 +308,7 @@
                     </p>
                     
                     <div class="experience-highlight">
-                        <h3>Resultados Comprobados</h3>
+                        <h3 data-i18n="contact.results">Resultados Comprobados</h3>
                         <div class="achievement">
                             <i class="fas fa-chart-line"></i>
                             <div>
@@ -331,7 +333,7 @@
                     </div>
 
                     <div class="contact-methods">
-                        <h3>Contacto Directo</h3>
+                        <h3 data-i18n="contact.direct">Contacto Directo</h3>
                         <div class="contact-item">
                             <i class="fas fa-map-marker-alt"></i>
                             <span>Cartagena, Colombia</span>
@@ -364,22 +366,22 @@
                         <div class="form-group">
                             <textarea id="message" name="message" placeholder="Tu mensaje" rows="5" required></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
+                        <button type="submit" class="btn btn-primary" data-i18n="contact.send">Enviar Mensaje</button>
                     </form>
                 </div>
             </div>
             <div class="social-links">
                 <a href="https://wa.me/573013316136" target="_blank" class="social-link whatsapp">
                     <i class="fab fa-whatsapp"></i>
-                    <span>WhatsApp</span>
+                    <span data-i18n="social.whatsapp">WhatsApp</span>
                 </a>
                 <a href="mailto:jahm1997@gmail.com" class="social-link email">
                     <i class="fas fa-envelope"></i>
-                    <span>Email</span>
+                    <span data-i18n="social.email">Email</span>
                 </a>
                 <a href="#" class="social-link linkedin">
                     <i class="fab fa-linkedin"></i>
-                    <span>LinkedIn</span>
+                    <span data-i18n="social.linkedin">LinkedIn</span>
                 </a>
             </div>
         </div>

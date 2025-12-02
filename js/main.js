@@ -452,3 +452,105 @@ document.addEventListener('DOMContentLoaded', function() {
     console.log('%c¿Necesitas ayuda con tu proyecto? ¡Contáctame!', 'color: #6b7280; font-size: 14px;');
     console.log('%cWhatsApp: +57 301 331 6136 | Email: jahm1997@gmail.com', 'color: #059669; font-size: 14px;');
 });
+    const themeToggle = document.getElementById('themeToggle');
+    const langToggle = document.getElementById('langToggle');
+
+    const i18n = {
+        es: {
+            'nav.home': 'Inicio',
+            'nav.about': 'Sobre Mí',
+            'nav.services': 'Servicios',
+            'nav.portfolio': 'Portafolio',
+            'nav.contact': 'Contacto',
+            'hero.title1': 'Liderando Proyectos',
+            'hero.title2': 'IIoT & Full Stack',
+            'hero.desc': 'Desarrollador Full Stack Senior especializado en Internet de las Cosas (IIoT), telecomunicaciones y sector industrial. Reduzco tiempos de entrega en 25% y optimizo flujos de trabajo en 60% con soluciones escalables.',
+            'hero.viewServices': 'Ver Servicios',
+            'hero.contact': 'Contactar',
+            'sections.about': 'Sobre Mí',
+            'sections.services': 'Servicios',
+            'sections.portfolio': 'Portafolio',
+            'sections.contact': 'Contacto',
+            'contact.results': 'Resultados Comprobados',
+            'contact.direct': 'Contacto Directo',
+            'contact.send': 'Enviar Mensaje',
+            'social.whatsapp': 'WhatsApp',
+            'social.email': 'Email',
+            'social.linkedin': 'LinkedIn'
+        },
+        en: {
+            'nav.home': 'Home',
+            'nav.about': 'About',
+            'nav.services': 'Services',
+            'nav.portfolio': 'Portfolio',
+            'nav.contact': 'Contact',
+            'hero.title1': 'Leading Projects',
+            'hero.title2': 'IIoT & Full Stack',
+            'hero.desc': 'Senior Full Stack Developer specialized in IIoT, telecommunications and industrial sector. I reduce delivery times by 25% and optimize workflows by 60% with scalable solutions.',
+            'hero.viewServices': 'View Services',
+            'hero.contact': 'Contact',
+            'sections.about': 'About Me',
+            'sections.services': 'Services',
+            'sections.portfolio': 'Portfolio',
+            'sections.contact': 'Contact',
+            'contact.results': 'Proven Results',
+            'contact.direct': 'Direct Contact',
+            'contact.send': 'Send Message',
+            'social.whatsapp': 'WhatsApp',
+            'social.email': 'Email',
+            'social.linkedin': 'LinkedIn'
+        }
+    };
+
+    function applyLanguage(lang) {
+        document.querySelectorAll('[data-i18n]').forEach(el => {
+            const key = el.getAttribute('data-i18n');
+            const text = i18n[lang][key];
+            if (text) {
+                el.textContent = text;
+            }
+        });
+        localStorage.setItem('lang', lang);
+        if (langToggle) langToggle.textContent = lang.toUpperCase();
+    }
+
+    const systemLang = (navigator.language || 'es').startsWith('es') ? 'es' : 'en';
+    const savedLang = localStorage.getItem('lang') || systemLang;
+    applyLanguage(savedLang);
+
+    if (langToggle) {
+        langToggle.addEventListener('click', () => {
+            const next = (localStorage.getItem('lang') === 'es') ? 'en' : 'es';
+            applyLanguage(next);
+        });
+    }
+
+    function applyTheme(pref) {
+        if (pref === 'system') {
+            document.documentElement.removeAttribute('data-theme');
+        } else {
+            document.documentElement.setAttribute('data-theme', pref);
+        }
+        localStorage.setItem('theme', pref);
+        if (themeToggle) {
+            themeToggle.textContent = pref === 'dark' ? '🌙' : pref === 'light' ? '☀️' : '🖥️';
+        }
+    }
+
+    const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+    const savedTheme = localStorage.getItem('theme') || 'system';
+    applyTheme(savedTheme);
+
+    mediaQuery.addEventListener('change', () => {
+        if ((localStorage.getItem('theme') || 'system') === 'system') {
+            applyTheme('system');
+        }
+    });
+
+    if (themeToggle) {
+        themeToggle.addEventListener('click', () => {
+            const current = localStorage.getItem('theme') || 'system';
+            const next = current === 'system' ? (mediaQuery.matches ? 'light' : 'dark') : current === 'dark' ? 'light' : 'system';
+            applyTheme(next);
+        });
+    }

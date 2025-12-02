@@ -132,11 +132,10 @@ class ScrollAnimator {
             const windowHeight = window.innerHeight;
             const documentHeight = document.documentElement.scrollHeight;
             
-            // Efecto de opacidad para el navbar
             const navbar = document.querySelector('.navbar');
             if (navbar) {
                 const opacity = Math.min(scrolled / 100, 0.95);
-                navbar.style.backgroundColor = `rgba(255, 255, 255, ${opacity})`;
+                navbar.style.opacity = 1;
             }
             
             // Efecto de parallax para el hero
@@ -474,7 +473,7 @@ class TextAnimator {
 class SoundSystem {
     constructor() {
         this.sounds = {};
-        this.enabled = false;
+        this.enabled = true;
         this.init();
     }
     
@@ -502,11 +501,15 @@ class SoundSystem {
             z-index: 1000;
             transition: all 0.3s ease;
         `;
+        soundToggle.setAttribute('aria-label', 'Apagar sonido');
+        soundToggle.title = 'Apagar sonido';
         
         soundToggle.addEventListener('click', () => {
             this.enabled = !this.enabled;
             soundToggle.innerHTML = this.enabled ? '🔊' : '🔇';
             soundToggle.style.background = this.enabled ? 'rgba(37, 99, 235, 0.8)' : 'rgba(0, 0, 0, 0.7)';
+            soundToggle.setAttribute('aria-label', this.enabled ? 'Apagar sonido' : 'Encender sonido');
+            soundToggle.title = this.enabled ? 'Apagar sonido' : 'Encender sonido';
         });
         
         document.body.appendChild(soundToggle);
@@ -516,6 +519,12 @@ class SoundSystem {
         // Crear sonidos sintéticos usando Web Audio API
         if (typeof AudioContext !== 'undefined' || typeof webkitAudioContext !== 'undefined') {
             this.audioContext = new (window.AudioContext || window.webkitAudioContext)();
+            const resume = () => {
+                if (this.audioContext && this.audioContext.state === 'suspended') {
+                    this.audioContext.resume();
+                }
+            };
+            window.addEventListener('click', resume, { once: true });
         }
     }
     
@@ -557,7 +566,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     new TextAnimator();
-    new SoundSystem();
     
     // Agregar efectos de sonido a elementos interactivos
     document.querySelectorAll('.btn, .nav-link, .service-card, .social-link').forEach(element => {
@@ -574,6 +582,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Hacer disponible globalmente
-    window.soundSystem = new SoundSystem();
+    const ss = new SoundSystem();
+    window.soundSystem = ss;
 });

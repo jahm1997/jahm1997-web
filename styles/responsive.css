@@ -405,6 +405,20 @@
     }
 }
 
+html[data-theme="dark"] {
+    --text-dark: #f9fafb;
+    --text-light: #d1d5db;
+    --bg-light: #111827;
+    --bg-white: #1f2937;
+}
+
+html[data-theme="light"] {
+    --text-dark: #1f2937;
+    --text-light: #6b7280;
+    --bg-light: #f9fafb;
+    --bg-white: #ffffff;
+}
+
 /* Responsive Design - Reduced Motion */
 @media (prefers-reduced-motion: reduce) {
     * {
