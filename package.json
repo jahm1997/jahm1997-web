@@ -5,8 +5,9 @@
   "main": "index.html",
   "scripts": {
     "start": "npx http-server -p 3000 -o",
-    "build": "echo 'No build process needed for static site'",
+    "build": "shx rm -rf dist && shx mkdir -p dist && shx cp index.html dist/ && shx cp 404.html dist/ && shx cp -r styles dist/styles && shx cp -r js dist/js",
     "serve": "npx http-server -p 8080 -c-1",
+    "preview": "npx http-server dist -p 8080 -c-1",
     "dev": "npx live-server --port=3000"
   },
   "keywords": [
@@ -23,7 +24,8 @@
   "license": "MIT",
   "devDependencies": {
     "http-server": "^14.1.1",
-    "live-server": "^1.2.2"
+    "live-server": "^1.2.2",
+    "shx": "^0.3.4"
   },
   "repository": {
     "type": "git",
