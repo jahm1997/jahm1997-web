@@ -1,0 +1,36 @@
+{
+  "name": "joseph-herrera-portfolio",
+  "version": "1.0.0",
+  "description": "Landing page profesional de Joseph Herrera - Soluciones Tecnológicas",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx http-server -p 3000 -o",
+    "build": "echo 'No build process needed for static site'",
+    "serve": "npx http-server -p 8080 -c-1",
+    "dev": "npx live-server --port=3000"
+  },
+  "keywords": [
+    "portfolio",
+    "landing-page",
+    "web-development",
+    "javascript",
+    "css",
+    "html",
+    "responsive",
+    "animations"
+  ],
+  "author": "Joseph Herrera",
+  "license": "MIT",
+  "devDependencies": {
+    "http-server": "^14.1.1",
+    "live-server": "^1.2.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jahm1997/portfolio-landing"
+  },
+  "bugs": {
+    "url": "https://github.com/jahm1997/portfolio-landing/issues"
+  },
+  "homepage": "https://jahm1997.github.io/portfolio-landing"
+}

@@ -1,0 +1,465 @@
+/* Responsive Design - Tablet */
+@media screen and (max-width: 1024px) {
+    .container {
+        padding: 0 15px;
+    }
+    
+    .hero-title {
+        font-size: 2.8rem;
+    }
+    
+    .hero-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        text-align: center;
+    }
+    
+    .hero-image {
+        order: -1;
+    }
+    
+    .floating-card {
+        width: 250px;
+        height: 250px;
+    }
+    
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        text-align: center;
+    }
+    
+    .contact-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .services-grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 1.5rem;
+    }
+    
+    .portfolio-grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 1.5rem;
+    }
+    
+    .section-title {
+        font-size: 2.2rem;
+    }
+    
+    .social-links {
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+}
+
+/* Responsive Design - Mobile */
+@media screen and (max-width: 768px) {
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        flex-direction: column;
+        background-color: white;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: var(--shadow-lg);
+        padding: 2rem 0;
+        gap: 1.5rem;
+    }
+    .nav-menu .nav-link { color: var(--text-dark); }
+    
+    .nav-menu.active {
+        left: 0;
+    }
+    
+    .hamburger {
+        display: flex;
+    }
+    
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    
+    .hero {
+        min-height: 90vh;
+        padding-top: 80px;
+    }
+    
+    .hero-title {
+        font-size: 2.2rem;
+    }
+    
+    .hero-description {
+        font-size: 1.1rem;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .btn {
+        width: 100%;
+        max-width: 280px;
+        justify-content: center;
+    }
+    
+    .floating-card {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .floating-card i {
+        font-size: 3rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .section-subtitle {
+        font-size: 1rem;
+    }
+    
+    .about-text h3 {
+        font-size: 1.8rem;
+    }
+    
+    .about-description {
+        font-size: 1rem;
+    }
+    
+    .image-placeholder {
+        width: 250px;
+        height: 250px;
+    }
+    
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .service-card {
+        padding: 2rem;
+    }
+    
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .portfolio-item {
+        margin: 0 auto;
+        max-width: 400px;
+    }
+    
+    .contact-info {
+        gap: 1.5rem;
+    }
+    
+    .contact-item {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.8rem;
+    }
+    
+    .contact-icon {
+        margin: 0 auto;
+    }
+    
+    .contact-form {
+        padding: 1.5rem;
+    }
+    
+    .social-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+    
+    .social-link {
+        width: 100%;
+        max-width: 280px;
+        justify-content: center;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+    }
+    
+    .footer-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+    
+    section {
+        padding: 3rem 0;
+    }
+    
+    .nav-container {
+        padding: 0 15px;
+    }
+    
+    .hero-container {
+        padding: 0 15px;
+    }
+}
+
+/* Responsive Design - Small Mobile */
+@media screen and (max-width: 480px) {
+    .hero-title {
+        font-size: 1.8rem;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
+    .floating-card {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .floating-card i {
+        font-size: 2.5rem;
+    }
+    
+    .image-placeholder {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .image-placeholder i {
+        font-size: 4rem;
+    }
+    
+    .service-card {
+        padding: 1.5rem;
+    }
+    
+    .service-icon {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .service-icon i {
+        font-size: 1.5rem;
+    }
+    
+    .portfolio-item {
+        max-width: 100%;
+    }
+    
+    .contact-form {
+        padding: 1rem;
+    }
+    
+    .form-group input,
+    .form-group textarea {
+        padding: 0.8rem;
+        font-size: 0.9rem;
+    }
+    
+    .btn {
+        padding: 0.8rem 1.5rem;
+        font-size: 0.9rem;
+    }
+    
+    .social-link {
+        padding: 0.8rem 1.2rem;
+        font-size: 0.9rem;
+    }
+    
+    .footer-links {
+        gap: 0.8rem;
+    }
+    
+    .footer-links a {
+        font-size: 0.9rem;
+    }
+}
+
+/* Responsive Design - Extra Small Mobile */
+@media screen and (max-width: 375px) {
+    .hero-title {
+        font-size: 1.6rem;
+    }
+    
+    .hero-description {
+        font-size: 1rem;
+    }
+    
+    .section-title {
+        font-size: 1.6rem;
+    }
+    
+    .about-text h3 {
+        font-size: 1.5rem;
+    }
+    
+    .service-card h3 {
+        font-size: 1.3rem;
+    }
+    
+    .portfolio-content h3 {
+        font-size: 1.2rem;
+    }
+    
+    .contact-details h3 {
+        font-size: 1.1rem;
+    }
+    
+    .contact-details p {
+        font-size: 1rem;
+    }
+}
+
+/* Responsive Design - Landscape */
+@media screen and (max-height: 600px) and (orientation: landscape) {
+    .hero {
+        min-height: 120vh;
+    }
+    
+    .floating-card {
+        width: 180px;
+        height: 180px;
+    }
+    
+    .scroll-indicator {
+        bottom: 1rem;
+    }
+    
+    .nav-menu {
+        top: 60px;
+    }
+}
+
+/* Responsive Design - High DPI Screens */
+@media screen and (-webkit-min-device-pixel-ratio: 2),
+       screen and (min-resolution: 192dpi) {
+    .hero::before {
+        background-size: 50px 50px;
+    }
+    
+    .floating-card {
+        backdrop-filter: blur(20px);
+    }
+}
+
+/* Responsive Design - Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --text-dark: #f9fafb;
+        --text-light: #d1d5db;
+        --bg-light: #111827;
+        --bg-white: #1f2937;
+    }
+    
+    .navbar {
+        background: rgba(31, 41, 55, 0.95);
+    }
+    
+    .navbar.scrolled {
+        background: rgba(31, 41, 55, 0.98);
+    }
+    
+    .nav-menu {
+        background-color: #1f2937;
+    }
+    
+    .service-card,
+    .portfolio-item,
+    .contact-form {
+        background: var(--bg-white);
+        border-color: #374151;
+    }
+    
+    .form-group input,
+    .form-group textarea {
+        background: #374151;
+        border-color: #4b5563;
+        color: var(--text-dark);
+    }
+    
+    .skill-bar {
+        background: #374151;
+    }
+    
+    .tech-tag {
+        background: #374151;
+        color: var(--text-dark);
+    }
+}
+
+/* Responsive Design - Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+    
+    .floating-card {
+        animation: none;
+    }
+    
+    .scroll-indicator {
+        animation: none;
+    }
+    
+    .pulse {
+        animation: none;
+    }
+    
+    .heartbeat {
+        animation: none;
+    }
+}
+
+/* Responsive Design - Print Styles */
+@media print {
+    .navbar,
+    .scroll-indicator,
+    .social-links,
+    .footer {
+        display: none;
+    }
+    
+    .hero {
+        background: white !important;
+        color: black !important;
+        min-height: auto;
+        padding: 2rem 0;
+    }
+    
+    .hero-title,
+    .hero-description {
+        color: black !important;
+    }
+    
+    section {
+        page-break-inside: avoid;
+        padding: 1rem 0;
+    }
+    
+    .service-card,
+    .portfolio-item {
+        break-inside: avoid;
+        box-shadow: none;
+        border: 1px solid #ccc;
+    }
+}
