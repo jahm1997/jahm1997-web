@@ -114,7 +114,8 @@ Edita las variables CSS en `styles/main.css`:
 
 - **Diseñado y Desarrollado por**: Joseph Herrera
 - **Contacto**: jahm1997@gmail.com
-- **WhatsApp**: +57 301 331 6136
+- **WhatsApp**: +57 314 708 5362
+- **Sitio web**: https://jahm1997.com
 
 ## 📄 Licencia
 
