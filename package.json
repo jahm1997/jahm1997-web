@@ -5,7 +5,7 @@
   "main": "index.html",
   "scripts": {
     "start": "npx http-server -p 3000 -o",
-    "build": "shx rm -rf dist && shx mkdir -p dist && shx cp index.html dist/ && shx cp 404.html dist/ && shx cp -r styles dist/styles && shx cp -r js dist/js",
+    "build": "shx rm -rf dist && shx mkdir -p dist && shx cp index.html dist/ && shx cp 404.html dist/ && shx cp -r styles dist/styles && shx cp -r js dist/js && shx cp -r components dist/components && shx cp -r assets dist/assets",
     "serve": "npx http-server -p 8080 -c-1",
     "preview": "npx http-server dist -p 8080 -c-1",
     "dev": "npx live-server --port=3000"

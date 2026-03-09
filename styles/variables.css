@@ -1,0 +1,23 @@
+:root {
+    --color-primary: #6b7cff;
+    --color-secondary: #0f172a;
+    --color-accent: #00f5d4;
+    --color-neon-blue: #3f8cff;
+    --color-neon-purple: #a855f7;
+    --color-neon-cyan: #22d3ee;
+
+    --background-main: #090b1a;
+    --background-secondary: #11142a;
+    --background-card: rgba(18, 24, 48, 0.84);
+
+    --text-primary: #f1f5ff;
+    --text-secondary: #a7b0d3;
+
+    --border-glow: 1px solid rgba(63, 140, 255, 0.36);
+
+    --radius-lg: 1.25rem;
+    --radius-md: 0.85rem;
+    --shadow-neon: 0 0 0.85rem rgba(63, 140, 255, 0.4);
+    --shadow-soft: 0 20px 40px rgba(3, 6, 20, 0.45);
+    --container: min(1180px, 92vw);
+}
