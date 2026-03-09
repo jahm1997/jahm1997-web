@@ -1,5 +1,5 @@
 Joseph Ángel Herrera Mantilla
-Cartagena, Colombia - linkedin.com/in//joseph-angel-herrera-mantilla - +57 3013316136 – jahm1997@gmail.com
+Cartagena, Colombia - linkedin.com/in//joseph-angel-herrera-mantilla - +57 314 7085362 – jahm1997@gmail.com
 Más de 2 años de experiencia como Desarrollador Full Stack, liderando proyectos en Internet de las Cosas (IIoT),
 telecomunicaciones y sector industrial. Durante mi liderazgo implementé buenas prácticas de desarrollo, reduciendo los
 tiempos de entrega en un 25% y mejorando la calidad técnica del equipo. Diseñé y desarrollé herramientas completas de
